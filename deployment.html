@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+                    <html lang="ru">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                        <link rel="stylesheet" href="css/reset.min.css">
+                        <link rel="stylesheet" href="css/weather-icons.min.css">
+                        <link rel="stylesheet" href="css/style.css">
+                        <title>Аксион Погода</title>
+                    </head>
+                    <body class="body">
+                        <div id="deployment" style="background-image: url(&quot;images/bg/clouds.jpg&quot;);">
+        <header class="header">
+            <h1 class="header__text">Погода в Ижевске на <time id="time">19 мая 2019 г.</time></h1>
+        </header>
+        <main class="main">
+            <div class="current">
+                <section class="current__top">
+                    <div class="current__top-icon"><i class="wi wi-day-cloudy"></i></div>
+                    <p class="current__top-temp"><span id="temp">7.5</span>°</p>
+                    <p class="current__top-measurement">С</p>
+                </section>
+                <p class="current__condition">Облачно</p>
+                <section class="current__bottom">
+                    <p class="current__bottom-item">Ощущается как <span id="feelsLike">4.2</span>°</p>
+                    <p class="current__bottom-item">Скорость ветра <span id="windSpeed">5.4</span>м/с</p>
+                    <p class="current__bottom-item">Облачность <span id="cloudCover">93</span>%</p>
+                    <p class="current__bottom-item">Давление <span id="pressure">756</span> мм рт.ст.</p>
+                    <p class="current__bottom-item">Влажность <span id="humidity">55</span>%</p>
+                    <p class="current__bottom-item">Направление ветра <span id="windDirection">СЗ</span></p>
+                </section>
+            </div>        
+            <div class="forecast">
+                <h2 class="forecast__header">Небольшой дождь в четверг и следующее воскресенье, с температурой, поднимающейся до 17°C в среду.</h2>
+                <div class="forecast__container">
+                 <section class="forecast__item">
+                            <time class="forecast__item-time">Понедельник, 20</time>
+                            <div class="forecast__item-icon"><i class="wi wi-fog"></i></div>
+                            <p><span class="forecast__item-temp">11.2</span>°<span class="forecast__item-feelslike">11.2</span>°</p>
+                            <p class="forecast__item-condition">Туман днем.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Вторник, 21</time>
+                            <div class="forecast__item-icon"><i class="wi wi-night-alt-partly-cloudy"></i></div>
+                            <p><span class="forecast__item-temp">14.3</span>°<span class="forecast__item-feelslike">14.3</span>°</p>
+                            <p class="forecast__item-condition">Небольшая облачность ночью.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Среда, 22</time>
+                            <div class="forecast__item-icon"><i class="wi wi-night-alt-partly-cloudy"></i></div>
+                            <p><span class="forecast__item-temp">16.7</span>°<span class="forecast__item-feelslike">16.7</span>°</p>
+                            <p class="forecast__item-condition">Облачно начинается вечером.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Четверг, 23</time>
+                            <div class="forecast__item-icon"><i class="wi wi-rain"></i></div>
+                            <p><span class="forecast__item-temp">16.7</span>°<span class="forecast__item-feelslike">16.7</span>°</p>
+                            <p class="forecast__item-condition">Небольшой дождь, начинаясь с середины дня, и до вечера.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Пятница, 24</time>
+                            <div class="forecast__item-icon"><i class="wi wi-night-alt-partly-cloudy"></i></div>
+                            <p><span class="forecast__item-temp">12.1</span>°<span class="forecast__item-feelslike">12.1</span>°</p>
+                            <p class="forecast__item-condition">Облачно начинается вечером.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Суббота, 25</time>
+                            <div class="forecast__item-icon"><i class="wi wi-fog"></i></div>
+                            <p><span class="forecast__item-temp">14.1</span>°<span class="forecast__item-feelslike">14.1</span>°</p>
+                            <p class="forecast__item-condition">Туман ночью.</p>
+                        </section> <section class="forecast__item">
+                            <time class="forecast__item-time">Воскресенье, 26</time>
+                            <div class="forecast__item-icon"><i class="wi wi-rain"></i></div>
+                            <p><span class="forecast__item-temp">12.4</span>°<span class="forecast__item-feelslike">12.4</span>°</p>
+                            <p class="forecast__item-condition">Небольшой дождь, начинаясь с середины дня, и до вечера.</p>
+                        </section></div>
+            </div>        
+        </main>
+        <footer class="footer">
+            <p class="footer__text">АО «Ижевский мотозавод «Аксион-холдинг»</p>
+        </footer>
+    </div></body></html>

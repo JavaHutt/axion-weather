@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Open Sans Light';
+    src: url('../font/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'Open Sans SemiBold';
+    src: url('../font/OpenSans-SemiBold.ttf');
+}
+
+:root {
+    --header-color: #212931;
+    --header-text-color: #ffffff;
+    --text-color: #ffffff;
+    --hover-color: rgba(255,255,255, 0.3);
+    --header-height: 80px;
+    --footer-height: 40px;
+    --font-light:  'Open Sans Light';
+    --font-semi-bold: 'Open Sans SemiBold';
+}
