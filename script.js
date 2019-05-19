@@ -161,27 +161,29 @@ document.addEventListener('DOMContentLoaded', () => {
     time.textContent = getCurrentDate();
     getForecast().then(result => {
         // Текущая погода
-        deployment.style.backgroundImage = `url(${background[result.data.currently.icon]})`;
-        temp.textContent = filters.decimal(result.data.currently.temperature);
-        feelsLike.textContent = filters.decimal(result.data.currently.apparentTemperature);
-        windSpeed.textContent = filters.decimal(result.data.currently.windSpeed);
-        cloudCover.textContent = filters.percentage(result.data.currently.cloudCover);
-        pressure.textContent = filters.mbToMm(result.data.currently.pressure);
-        humidity.textContent = filters.percentage(result.data.currently.humidity);
-        windDirection.textContent = filters.direction(result.data.currently.windBearing);        
-        currentIcon.insertAdjacentHTML('beforeend', icons[result.data.currently.icon]);
-        currentCondition.textContent = result.data.currently.summary;
-        result.data.currently.icon == 'snow' ? root.style.setProperty('--text-color', '#000000') : root.style.setProperty('--text-color', '#ffffff');
+        const currently = result.data.currently;
+
+        deployment.style.backgroundImage = `url(${background[currently.icon]})`;
+        temp.textContent = filters.decimal(currently.temperature);
+        feelsLike.textContent = filters.decimal(currently.apparentTemperature);
+        windSpeed.textContent = filters.decimal(currently.windSpeed);
+        cloudCover.textContent = filters.percentage(currently.cloudCover);
+        pressure.textContent = filters.mbToMm(currently.pressure);
+        humidity.textContent = filters.percentage(currently.humidity);
+        windDirection.textContent = filters.direction(currently.windBearing);        
+        currentIcon.insertAdjacentHTML('beforeend', icons[currently.icon]);
+        currentCondition.textContent = currently.summary;
+        currently.icon == 'snow' ? root.style.setProperty('--text-color', '#000000') : root.style.setProperty('--text-color', '#ffffff');
 
         // Прогноз на 7 дней
         forecastHeader.textContent = result.data.daily.summary;
         for (let i = 1; i <= 7; i++) {
-            const data    = result.data.daily.data[i];
-            let time      = getForecastDate(data.time);
-            let icon      = icons[data.icon];
-            let temp      = filters.decimal(data.temperatureHigh);
-            let feelsLike = filters.decimal(data.apparentTemperatureHigh);
-            let summary   = data.summary;
+            const forecast    = result.data.daily.data[i];
+            let time      = getForecastDate(forecast.time);
+            let icon      = icons[forecast.icon];
+            let temp      = filters.decimal(forecast.temperatureHigh);
+            let feelsLike = filters.decimal(forecast.apparentTemperatureHigh);
+            let summary   = forecast.summary;
 
             let html = ` <section class="forecast__item">
                             <time class="forecast__item-time">${time}</time>

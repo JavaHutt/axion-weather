@@ -1,6 +1,5 @@
 <?php
     $html = $_POST['html'];
-    #echo json_encode($_POST); die();
 
     $file = fopen('deployment.html', 'w');
     fwrite($file, '<!DOCTYPE html>
