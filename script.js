@@ -198,9 +198,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(error);
     })
     .finally(() => {
-        const params = new URLSearchParams();
+        // const params = new URLSearchParams();
 
-        params.append('html', deployment.outerHTML);
-        deployHTML(params);
+        // params.append('html', deployment.outerHTML);
+        // deployHTML(params);
     });
 })
